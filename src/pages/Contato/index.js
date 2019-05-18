@@ -117,18 +117,18 @@ class Contato extends Component {
             alert('Modal has been closed.')
           }}>
             <ScrollView style={{backgroundColor: "#1A1919"}} >
-              <Text style={{color: '#C4C4C4', textAlign: 'center', alignItems: 'center', fontSize: 24}}>Atualizar Dados</Text>
+              <Text style={styles.textTituloAtualizar}>Atualizar Dados</Text>
               <TextInput placeholder="Nome" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(nome) => this.setState({nome})}/>
               <TextInput placeholder="Sobrenome" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(sobrenome) => this.setState({sobrenome})}/>
-              <TextInput placeholder="Telefone" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(telefone) => this.setState({telefone})}/>
-              <Text style={{color: '#C4C4C4', textAlign: 'center', alignItems: 'center', fontSize: 22}}>Endereço</Text>
+              <TextInput placeholder="Telefone" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(telefone) => this.setState({telefone})} keyboardType="numeric"/>
+              <Text style={styles.textEndereco}>Endereço</Text>
               <TextInput placeholder="Rua " placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(rua) => this.setState({rua})}/>
               <TextInput placeholder="Bairro" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(bairro) => this.setState({bairro})}/>
               <TextInput placeholder="Cidade" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(cidade) => this.setState({cidade})}/>
               <TextInput placeholder="UF" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(uf) => this.setState({uf})}/>
               <TextInput placeholder="E-Mail" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(email) => this.setState({email})}/>
 
-              <TouchableOpacity onPress={this.handleAtualizar} style={{width: 172, height: 42, backgroundColor: 'rgba(196, 196, 196, 0.8)', justifyContent: 'center', alignItems: 'center', borderRadius: 20, marginLeft: 120, marginTop: 20, marginBottom: 20}}>
+              <TouchableOpacity onPress={this.handleAtualizar} style={styles.btnAtualizar}>
                   <Text style={{fontSize: 20}}>ATUALIZAR</Text>
               </TouchableOpacity>
 

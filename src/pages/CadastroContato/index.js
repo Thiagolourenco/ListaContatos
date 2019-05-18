@@ -63,15 +63,15 @@ class Cadastro extends Component {
 
             <TextInput placeholder="Nome" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(nome) => this.setState({nome})}/>
             <TextInput placeholder="Sobrenome" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(sobrenome) => this.setState({sobrenome})}/>
-            <TextInput placeholder="Telefone" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(telefone) => this.setState({telefone})}/>
-            <Text style={{color: '#C4C4C4', textAlign: 'center', alignItems: 'center', fontSize: 22}}>Endereço</Text>
+            <TextInput placeholder="Telefone" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(telefone) => this.setState({telefone})} keyboardType="numeric"/>
+            <Text style={styles.textEndereco}>Endereço</Text>
             <TextInput placeholder="Rua " placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(rua) => this.setState({rua})}/>
             <TextInput placeholder="Bairro" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(bairro) => this.setState({bairro})}/>
             <TextInput placeholder="Cidade" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(cidade) => this.setState({cidade})}/>
             <TextInput placeholder="UF" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(uf) => this.setState({uf})}/>
             <TextInput placeholder="E-Mail" placeholderTextColor="#C4C4C4" style={styles.input} onChangeText={(email) => this.setState({email})}/>
 
-        <TouchableOpacity onPress={this.handleCadastrar} style={{width: 172, height: 42, backgroundColor: 'rgba(196, 196, 196, 0.8)', justifyContent: 'center', alignItems: 'center', borderRadius: 20, marginLeft: 120, marginTop: 20, marginBottom: 20}}>
+        <TouchableOpacity onPress={this.handleCadastrar} style={styles.btnCadastrar}>
             <Text style={{fontSize: 20}}>CADASTRAR</Text>
         </TouchableOpacity>
  
